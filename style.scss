@@ -399,7 +399,13 @@ label.panel-label {
 // body
 body {
   // background: $color-primary-light;
-  background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+  // background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+  // background: url(https://raw.githubusercontent.com/hudsonmarinho/header-and-footer-parallax-effect/master/assets/images/bg-header.jpg) no-repeat 50% 50%;
+  background-image: linear-gradient( 135deg, #FFD26F 10%, #3677FF 100%);
+
+
+
+  
   
 
   color: $color-text;
