@@ -630,7 +630,7 @@ pre strong {
 
 table {
   border-collapse: collapse;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -644,11 +644,5 @@ th {
 
 td {
   font-weight: bold;
-}
-
-@media screen and (min-width: 768px) {
-  table {
-    width: 50%;
-  }
 }
 /*# sourceMappingURL=style.css.map */
