@@ -1,4 +1,27 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400|Inconsolata);
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Sora:wght@400;600;700&display=swap");
+:root {
+  --color-primary: #000;
+  --color-primary-alt: #ddd;
+  --color-secondary: #fff;
+  --font-family-primary: "Sora", sans-serif;
+  --font-family-secondary: "Inter", "Sora", sans-serif;
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 1.5rem;
+  --font-size-h3: 1.25rem;
+  --font-size-h4: 1.125rem;
+  --font-size-text: 1rem;
+}
+
+@media all and (min-width: 1300px) {
+  :root {
+    --font-size-h1: 3.5rem;
+    --font-size-h2: 2.5rem;
+    --font-size-h3: 1.5rem;
+    --font-size-h4: 1.25rem;
+    --font-size-text: 1.125rem;
+  }
+}
+
 ul#tabs-list {
   list-style: none;
   text-align: center;
@@ -382,9 +405,11 @@ label.panel-label:hover {
 }
 
 .panel-radios {
+  margin: 0 auto;
+  width: 100%;
   position: fixed;
-  left: 50%;
-  top: 10px;
+  left: 48.3%;
+  top: 30px;
   width: 20px;
   opacity: 0.5;
   z-index: 99;
@@ -412,12 +437,13 @@ label.panel-label:hover {
 
 .panel-radios:nth-child(6) {
   transform: translateX(50px);
+  display: block;
 }
 
 body {
   background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
   color: #444444;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: var(--font-family-primary);
 }
 
 #introduction {
@@ -428,18 +454,29 @@ body {
 }
 
 #introduction h1 {
-  font-weight: 300;
+  font-size: var(--font-size-h1);
+  text-align: center;
+}
+
+#introduction h2 {
+  font-size: var(--font-size-h2);
+  text-align: center;
+}
+
+#introduction h3 {
+  font-size: var(--font-size-h3);
   text-align: center;
 }
 
 #introduction h4 {
-  font-weight: 300;
+  font-size: var(--font-size-h4);
   text-align: center;
 }
 
 main h1 {
   margin-top: 0;
   font-weight: 300;
+  font-size: var(--font-size-h1);
   color: #c0392b;
 }
 
@@ -447,6 +484,7 @@ main p {
   line-height: 1.8;
   text-align: justify;
   text-justify: inter-word;
+  font-size: var(--font-size-text);
 }
 
 main hr {
@@ -489,7 +527,7 @@ label.demo-label:hover {
 code,
 pre {
   color: #c0392b;
-  font-family: Inconsolata, "Andale Mono", Andale, monowidth;
+  font-family: var(--font-family-secondary);
   background-color: #ecf0f1;
   border: 1px solid #dfdfdf;
   border-radius: 2px;
@@ -528,7 +566,7 @@ pre strong {
   background: var(--color-bg);
   color: var(--color-text);
   font-size: 18px;
-  font-family: 'Fira Mono', Consolas, Menlo, Monaco, 'Courier New', Courier, monospace;
+  font-family: "Fira Mono", Consolas, Menlo, Monaco, "Courier New", Courier, monospace;
   border-radius: 4px;
   padding: 75px 45px 35px;
   position: relative;
@@ -536,7 +574,7 @@ pre strong {
 }
 
 [data-termynal]:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 15px;
   left: 15px;
@@ -556,7 +594,7 @@ pre strong {
 
 [data-ty]:before {
   /* Set up defaults and ensure empty lines are displayed. */
-  content: '';
+  content: "";
   display: inline-block;
   vertical-align: middle;
 }
@@ -568,7 +606,7 @@ pre strong {
 }
 
 [data-ty="input"]:before {
-  content: '$';
+  content: "$";
 }
 
 [data-ty][data-ty-prompt]:before {
